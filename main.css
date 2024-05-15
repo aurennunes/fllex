@@ -1,0 +1,200 @@
+@font-face {
+   font-family: "a1";
+   font-style: normal;
+   font-weight: normal;
+   src: url("./Arista-Pro-Bold-trial.ttf");
+}
+
+* {
+   transition: 0.6s;
+}
+
+body,
+html {
+   margin: 0;
+   padding: 0;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+}
+
+footer {
+   display: none;
+}
+
+header.header {
+   top: 0;
+   height: 50px;
+   width: 100vw;
+   position: fixed;
+
+}
+
+header.header>nav {
+   width: 90vw;
+   height: 100%;
+   padding: 1vh 0;
+   margin: 0 auto;
+}
+
+header.header>nav>img {
+   height: 7vh;
+}
+
+main {
+   height: 100%;
+   display: flex;
+   position: relative;
+}
+
+div.effect {
+   top: 0;
+   width: 60vw;
+   right: -15vw;
+   height: 110vh;
+   position: absolute;
+   background: #000;
+   border-radius: 0% 0% 0% 100%;
+}
+
+img.isto {
+   top: 20vh;
+   width: auto;
+   right: 13vw;
+   height: 75vh;
+   object-fit: cover;
+   position: absolute;
+}
+
+div.content {
+   height: 100vh;
+   display: flex;
+   margin-left: 13vw;
+   flex-direction: column;
+   justify-content: center;
+}
+
+div.content h1 {
+   display: flex;
+   font-family: a1;
+   font-size: 4.4vw;
+   font-weight: 700;
+   flex-direction: column;
+}
+
+div.content p {
+   max-width: 35vw;
+   font-size: 1.2vw;
+   font-family: sans-serif;
+}
+
+div.content a {
+   color: white;
+   font-family: a1;
+   font-size: 1.3vw;
+   width: fit-content;
+   padding: 1.3vh 1.2vw;
+   text-decoration: none;
+   background-color: black;
+}
+
+@media (orientation: portrait) {
+   div.effect {
+      display: none;
+   }
+
+   header.header {
+      height: 40px;
+   }
+
+   header.header>nav>img {
+      height: 30px;
+      width: auto;
+   }
+
+   header.header {
+      top: 0;
+      z-index: 100;
+      padding: 5px 0px;
+      position: sticky;
+      background: #000;
+   }
+
+   body,
+   html {
+      height: auto;
+      overflow: auto;
+      min-height: 100vh;
+      overflow-x: hidden;
+   }
+
+   div.content {
+      height: fit-content;
+      align-items: center;
+      margin: 0 auto !important;
+      max-width: calc(100vw - 80px);
+   }
+
+   main {
+      height: fit-content;
+      flex-direction: column;
+   }
+
+   div.content p {
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: fit-content;
+   }
+
+   img.isto {
+      top: auto;
+      width: 70%;
+      right: auto;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: 80px;
+      height: auto !important;
+
+   }
+
+   div.content h1 {
+      font-size: 44px;
+      align-items: center;
+   }
+
+   div.content h1 span {
+      text-align: center;
+   }
+
+   div.content a {
+      font-size: 14px;
+      padding: 10px 20px;
+      position: absolute;
+      bottom: 30px;
+      margin: 0 auto;
+   }
+
+   ::-webkit-scrollbar {
+      width: 2px;
+      height: 0px;
+   }
+
+   ::-webkit-scrollbar-track {
+      left: 0%;
+      width: 0px;
+      opacity: 100;
+      background: none;
+      position: absolute;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      border-radius: 18px;
+      background: #0000009e;
+   }
+
+   .scroll-none::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+   }
+}
